@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 from copy import deepcopy
 
+import pickle as pkl
 
 class PFLocaliser(PFLocaliserBase):
        
@@ -22,7 +23,7 @@ class PFLocaliser(PFLocaliserBase):
  
         # ----- Sensor model parameters
         self.NUMBER_PREDICTED_READINGS = 20     # Number of readings to predict
-        self.NUMBER_OF_PARTICLES = 100
+        self.NUMBER_OF_PARTICLES = 10_000
         
        
     def initialise_particle_cloud(self, initialpose: Pose) -> PoseArray:
@@ -40,13 +41,13 @@ class PFLocaliser(PFLocaliserBase):
             | (geometry_msgs.msg.PoseArray) poses of the particles
         """
         new_poses = PoseArray()
-        temp_pose = deepcopy(initialpose)
+        temp_pose = Pose()
 
         for _ in range(self.NUMBER_OF_PARTICLES):
-            temp_pose.pose.x = initialpose.pose.x + np.random.normal()
-            temp_pose.pose.y = initialpose.pose.y + np.random.normal()
+            temp_pose.position.x = initialpose.pose.pose.position.x + np.random.normal()
+            temp_pose.position.y = initialpose.pose.pose.position.y + np.random.normal()
 
-            temp_pose.orientation = rotateQuaternion(temp_pose, np.random.uniform(0, 2*np.pi))
+            temp_pose.orientation = rotateQuaternion(initialpose.pose.pose.orientation, np.random.uniform(0, 2*np.pi))
 
             new_poses.poses.append(temp_pose)
         
@@ -64,7 +65,7 @@ class PFLocaliser(PFLocaliserBase):
             | scan (sensor_msgs.msg.LaserScan): laser scan to use for update
 
          """
-        weights = [(pose, self.sensor_model.get_weight(scan, pose)) for pose in self.particlecloud]
+        weights = [(pose, self.sensor_model.get_weight(scan, pose)) for pose in self.particlecloud.poses]
 
         weights_pd = pd.DataFrame(weights, columns=["pose", "probability"])
 
@@ -75,7 +76,7 @@ class PFLocaliser(PFLocaliserBase):
 
         resampled_poses = PoseArray()
         for random in np.random.random(weights_pd.shape[0]):
-            for row in weights_pd.itertuples(index=False):
+            for _, row in weights_pd.iterrows():
                 if (random <= row['upper_limit']) & (random > row['lower_limit']):
                     resampled_poses.poses.append(row['pose'])
                     break
@@ -99,7 +100,7 @@ class PFLocaliser(PFLocaliserBase):
         :Return:
             | (geometry_msgs.msg.Pose) robot's estimated pose.
          """
-        data = [(pose.position.x, pose.position.y, pose.position.z, pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orienation.w) for pose in self.particlecloud]
+        data = [(pose.position.x, pose.position.y, pose.position.z, pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w) for pose in self.particlecloud.poses]
         dataframe = pd.DataFrame(data, columns=["px", 'py', 'pz', 'ox', 'oy', 'oz', 'ow'])
         
         final_point = Point()
@@ -108,8 +109,8 @@ class PFLocaliser(PFLocaliserBase):
         pz = dataframe['pz'].mean()
         
         final_point.x = px
-        final_point.y = px
-        final_point.z = px
+        final_point.y = py
+        final_point.z = pz
 
         final_pose = Pose()
         final_pose.position = final_point
