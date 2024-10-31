@@ -86,7 +86,7 @@ class PFLocaliser(PFLocaliserBase):
         # Extract positions and orientations
         positions = np.array([[pose.position.x, pose.position.y, pose.orientation.z, pose.orientation.w] for pose in self.particlecloud.poses])
         
-        # Use DBSCAN for clustering (more efficient than IsolationForest for this case)
+        # Use DBSCAN for clustering
         clustering = DBSCAN(eps=1, min_samples=10).fit(positions)
 
         # Find the largest cluster
