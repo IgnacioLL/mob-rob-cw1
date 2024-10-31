@@ -49,47 +49,79 @@ class PFLocaliser(PFLocaliserBase):
 
         return new_poses
 
-    def update_particle_cloud(self, scan) -> PoseArray:
-        """
-        Update particle cloud using numpy operations for better performance.
-        """
+def update_particle_cloud(self, scan) -> PoseArray:
+    """
+    Update particle cloud using numpy operations with kidnapped robot recovery.
+    Implements a dual-MCL approach with random particle injection when confidence is low.
+    """
+    # Calculate weights using numpy array operations
+    weights = np.array([self.sensor_model.get_weight(scan, pose) for pose in self.particlecloud.poses])
+    weights = 5 ** weights
 
-        # Calculate weights using numpy array operations
-        new_poses = []
-        weights = []
-        for idx, pose in enumerate(self.particlecloud.poses):
-            # if idx % 100:
-            #     pose.position.x = pose.position.x + np.random.standard_t(df=2) * self.NOISE_PARAMETER
-            #     pose.position.y = pose.position.y + np.random.standard_t(df=2) * self.NOISE_PARAMETER
-            #     pose.orientation = rotateQuaternion(pose.orientation, np.random.uniform(0, np.pi*2))
-            
-            weights.append(self.sensor_model.get_weight(scan, pose))
-            new_poses.append(pose)
-        
-
-        weights = np.array(weights)
-        weights = 5 ** weights      
-
-        # Normalize weights
-        normalized_weights = weights / np.sum(weights)
-        
+    # Normalize weights
+    normalized_weights = weights / np.sum(weights)
+    
+    # Detect kidnapped robot situation
+    average_weight = np.mean(weights)
+    weight_variance = np.var(weights)
+    
+    # Parameters for kidnapped robot detection
+    WEIGHT_THRESHOLD = 0.1  # Adjust based on your specific scenario
+    RANDOM_PARTICLE_RATIO = 0.2  # 20% random particles when kidnapped
+    
+    # Check if robot might be kidnapped (low weights indicate poor localization)
+    is_kidnapped = average_weight < WEIGHT_THRESHOLD
+    
+    # Calculate number of particles to resample and inject
+    n_particles = len(self.particlecloud.poses)
+    n_random = int(n_particles * RANDOM_PARTICLE_RATIO) if is_kidnapped else 0
+    n_resample = n_particles - n_random
+    
+    # Resample existing particles
+    resampled_poses = PoseArray()
+    if n_resample > 0:
         # Calculate cumulative probabilities
         cumulative_weights = np.cumsum(normalized_weights)
         
         # Generate random numbers for resampling
-        random_numbers = np.random.random(len(weights))
+        random_numbers = np.random.random(n_resample)
         
         # Resample using vectorized operations
-        resampled_poses = PoseArray()
         for random_num in random_numbers:
-            # Find the first weight greater than random number
             idx = np.searchsorted(cumulative_weights, random_num)
             if idx >= len(self.particlecloud.poses):
                 idx = len(self.particlecloud.poses) - 1
-            resampled_poses.poses.append(new_poses[idx])
+            resampled_poses.poses.append(self.particlecloud.poses[idx])
+    
+    # Add random particles if kidnapped
+    if n_random > 0:
+        # Get map bounds (assuming these are available as class attributes)
+        map_bounds = self.get_map_bounds()  # You'll need to implement this
         
-        self.particlecloud = resampled_poses
-
+        for _ in range(n_random):
+            random_pose = Pose()
+            # Generate random position within map bounds
+            random_pose.position.x = np.random.uniform(map_bounds['x_min'], map_bounds['x_max'])
+            random_pose.position.y = np.random.uniform(map_bounds['y_min'], map_bounds['y_max'])
+            
+            # Generate random orientation
+            angle = np.random.uniform(0, 2 * np.pi)
+            random_pose.orientation = Quaternion()
+            random_pose.orientation.z = np.sin(angle / 2.0)
+            random_pose.orientation.w = np.cos(angle / 2.0)
+            
+            resampled_poses.poses.append(random_pose)
+    
+    # Add small random noise to all particles to prevent particle depletion
+    for pose in resampled_poses.poses:
+        pose.position.x += np.random.normal(0, 0.05)
+        pose.position.y += np.random.normal(0, 0.05)
+        current_angle = 2 * np.arctan2(pose.orientation.z, pose.orientation.w)
+        angle_noise = np.random.normal(0, 0.1)
+        pose.orientation.z = np.sin((current_angle + angle_noise) / 2.0)
+        pose.orientation.w = np.cos((current_angle + angle_noise) / 2.0)
+    
+    self.particlecloud = resampled_poses
 
     def estimate_pose(self) -> Pose:
         """
