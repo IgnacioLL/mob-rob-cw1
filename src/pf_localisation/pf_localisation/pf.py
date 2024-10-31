@@ -16,7 +16,7 @@ class PFLocaliser(PFLocaliserBase):
         # Sensor model parameters
         self.NUMBER_PREDICTED_READINGS = 5
         self.NUMBER_OF_PARTICLES = 1000
-        self.NOISE_PARAMETER = 1
+        self.NOISE_PARAMETER = 2
 
         # Pre-allocate numpy arrays for better performance
         self.particle_positions = np.zeros((self.NUMBER_OF_PARTICLES, 2))
@@ -27,7 +27,7 @@ class PFLocaliser(PFLocaliserBase):
         Initialize particle cloud using vectorized operations.
         """
 
-        # print("Initial pose is:", initialpose)
+        print("Initial pose is:", initialpose)
         # Generate all random values at once
         position_noise = np.random.standard_t(df=2, size=(self.NUMBER_OF_PARTICLES, 2)) * self.NOISE_PARAMETER
         orientation_angles = np.random.uniform(0, np.pi*2, self.NUMBER_OF_PARTICLES)
@@ -58,7 +58,7 @@ class PFLocaliser(PFLocaliserBase):
         # Calculate weights using numpy array operations
         weights = np.array([self.sensor_model.get_weight(scan, pose) for pose in self.particlecloud.poses])
 
-        weights = 10 ** weights      
+        weights = 20 ** weights      
 
         # Normalize weights
         normalized_weights = weights / np.sum(weights)
@@ -87,11 +87,12 @@ class PFLocaliser(PFLocaliserBase):
         Estimate pose using DBSCAN clustering for better outlier handling.
         """
         # Extract positions and orientations
-        positions = np.array([[pose.position.x, pose.position.y] 
-                            for pose in self.particlecloud.poses])
+        positions = np.array([[pose.position.x, pose.position.y, pose.orientation.z, pose.orientation.w] for pose in self.particlecloud.poses])
         
         # Use DBSCAN for clustering (more efficient than IsolationForest for this case)
-        clustering = DBSCAN(eps=0.5, min_samples=5).fit(positions)
+        clustering = DBSCAN(eps=2, min_samples=1).fit(positions)
+
+        print("Number of labels",len(set(clustering.labels_)))
         
         # Find the largest cluster
         largest_cluster = max(set(clustering.labels_), key=list(clustering.labels_).count)
@@ -102,10 +103,10 @@ class PFLocaliser(PFLocaliserBase):
         final_pose = Pose()
         final_pose.position.x = np.mean(filtered_positions[:, 0])
         final_pose.position.y = np.mean(filtered_positions[:, 1])
-        
+
         # Calculate mean orientation (using circular mean for angles)
-        orientations = np.array([pose.orientation.z for pose in self.particlecloud.poses])
         final_pose.orientation = Quaternion()
-        final_pose.orientation.z = np.mean(orientations)  # Simplified for demonstration
+        final_pose.orientation.z = np.mean(filtered_positions[:, 2]) # Simplified for demonstration
+        final_pose.orientation.w = np.mean(filtered_positions[:, 3]) # Simplified for demonstration
 
         return final_pose
