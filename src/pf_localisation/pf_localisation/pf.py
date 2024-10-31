@@ -16,7 +16,7 @@ class PFLocaliser(PFLocaliserBase):
         # Sensor model parameters
         self.NUMBER_PREDICTED_READINGS = 5
         self.NUMBER_OF_PARTICLES = 1000
-        self.NOISE_PARAMETER = 2
+        self.NOISE_PARAMETER = 0.5
 
         # Pre-allocate numpy arrays for better performance
         self.particle_positions = np.zeros((self.NUMBER_OF_PARTICLES, 2))
@@ -29,7 +29,7 @@ class PFLocaliser(PFLocaliserBase):
 
         print("Initial pose is:", initialpose)
         # Generate all random values at once
-        position_noise = np.random.standard_t(df=2, size=(self.NUMBER_OF_PARTICLES, 2)) * self.NOISE_PARAMETER
+        position_noise = np.random.normal(scale=self.NOISE_PARAMETER/2, size=(self.NUMBER_OF_PARTICLES, 2)) + np.random.standard_t(df=2, size=(self.NUMBER_OF_PARTICLES, 2)) * self.NOISE_PARAMETER/2
         orientation_angles = np.random.uniform(0, np.pi*2, self.NUMBER_OF_PARTICLES)
         
         # Create positions array
@@ -84,27 +84,27 @@ class PFLocaliser(PFLocaliserBase):
 
     def estimate_pose(self) -> Pose:
         """
-        Estimate pose using DBSCAN clustering for better outlier handling.
+        Estimate pose using DBSCAN clustering for outlier handling.
         """
         # Extract positions and orientations
-        positions = np.array([[pose.position.x, pose.position.y, pose.orientation.z, pose.orientation.w] for pose in self.particlecloud.poses])
+        positions = np.array([[pose.position.x, pose.position.y] for pose in self.particlecloud.poses])
+        relevant_positions = np.array([[pose.position.x, pose.position.y, pose.orientation.z, pose.orientation.w] for pose in self.particlecloud.poses])
         
         # Use DBSCAN for clustering (more efficient than IsolationForest for this case)
-        clustering = DBSCAN(eps=2, min_samples=1).fit(positions)
+        clustering = DBSCAN(eps=1, min_samples=10).fit(positions)
 
-        print("Number of labels",len(set(clustering.labels_)))
         
         # Find the largest cluster
         largest_cluster = max(set(clustering.labels_), key=list(clustering.labels_).count)
         mask = clustering.labels_ == largest_cluster
-        filtered_positions = positions[mask]
+        filtered_positions = relevant_positions[mask]
 
         # Create final pose
         final_pose = Pose()
         final_pose.position.x = np.mean(filtered_positions[:, 0])
         final_pose.position.y = np.mean(filtered_positions[:, 1])
 
-        # Calculate mean orientation (using circular mean for angles)
+        # # Calculate mean orientation (using circular mean for angles)
         final_pose.orientation = Quaternion()
         final_pose.orientation.z = np.mean(filtered_positions[:, 2]) # Simplified for demonstration
         final_pose.orientation.w = np.mean(filtered_positions[:, 3]) # Simplified for demonstration
