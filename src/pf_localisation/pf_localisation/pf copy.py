@@ -16,18 +16,18 @@ class PFLocaliser(PFLocaliserBase):
         # Sensor model parameters
         self.NUMBER_PREDICTED_READINGS = 5
         self.NUMBER_OF_PARTICLES = 100
-        self.NOISE_PARAMETER = 0.5
+        self.NOISE_PARAMETER = 0.1
 
         # Pre-allocate numpy arrays for better performance
         self.particle_positions = np.zeros((self.NUMBER_OF_PARTICLES, 2))
         self.particle_orientations = np.zeros((self.NUMBER_OF_PARTICLES, 4))
-    
+       
     def initialise_particle_cloud(self, initialpose) -> PoseArray:
         """
         Initialize particle cloud using vectorized operations.
         """
         # Generate all random values at once
-        position_noise = np.random.normal(scale=self.NOISE_PARAMETER/2, size=(self.NUMBER_OF_PARTICLES, 2)) + np.random.standard_t(df=2, size=(self.NUMBER_OF_PARTICLES, 2)) * self.NOISE_PARAMETER/2
+        position_noise = np.random.normal(scale=self.NOISE_PARAMETER, size=(self.NUMBER_OF_PARTICLES, 2))
         orientation_angles = np.random.uniform(0, np.pi*2, self.NUMBER_OF_PARTICLES)
         
         # Create positions array
@@ -53,9 +53,21 @@ class PFLocaliser(PFLocaliserBase):
         """
         Update particle cloud using numpy operations for better performance.
         """
-        # Calculate weights using numpy array operations
-        weights = np.array([self.sensor_model.get_weight(scan, pose) for pose in self.particlecloud.poses])
 
+        # Calculate weights using numpy array operations
+        new_poses = []
+        weights = []
+        for idx, pose in enumerate(self.particlecloud.poses):
+            # if idx % 100:
+            #     pose.position.x = pose.position.x + np.random.standard_t(df=2) * self.NOISE_PARAMETER
+            #     pose.position.y = pose.position.y + np.random.standard_t(df=2) * self.NOISE_PARAMETER
+            #     pose.orientation = rotateQuaternion(pose.orientation, np.random.uniform(0, np.pi*2))
+            
+            weights.append(self.sensor_model.get_weight(scan, pose))
+            new_poses.append(pose)
+        
+
+        weights = np.array(weights)
         weights = 5 ** weights      
 
         # Normalize weights
@@ -74,7 +86,7 @@ class PFLocaliser(PFLocaliserBase):
             idx = np.searchsorted(cumulative_weights, random_num)
             if idx >= len(self.particlecloud.poses):
                 idx = len(self.particlecloud.poses) - 1
-            resampled_poses.poses.append(self.particlecloud.poses[idx])
+            resampled_poses.poses.append(new_poses[idx])
         
         self.particlecloud = resampled_poses
 
