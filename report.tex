@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+\geometry{a4paper, margin=1in}
+
+\title{Particle Filter Implementation for Localization}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}
+Localization is a fundamental problem in mobile robotics. This project implements a Particle Filter-based localization algorithm to achieve accurate localization and evaluates its performance against the Adaptive Monte Carlo Localization (AMCL) available in ROS 2.
+
+\section{Algorithm Design}
+
+\subsection{Particle Filter Overview}
+The Particle Filter algorithm uses a set of particles to represent the probability distribution of the robot's location. Each particle is evaluated through the given function \texttt{self.sensor\_model.get\_weight} this will return a rational value which a score of how likely is the particle the real position. 
+
+\subsubsection{Motion Update}
+In the motion update step, each particle’s position is modified according to a probabilistic motion model based on the robot’s control inputs.
+
+\subsubsection{Sensor Update}
+In the sensor update step, we use a measurement model to compare each particle’s position with the actual sensor reading from the robot and adjust particle weights based on similarity.
+
+\subsubsection{Resampling}
+After each update cycle, particles are resampled to ensure that those with higher weights (i.e., better matches to the observed data) are more likely to survive, while others are discarded.
+
+\subsection{Single Pose Estimate}
+To estimate a single pose from the particle set at each timestep, we explore two methods: the weighted average of particle poses and selecting the pose of the particle with the highest weight. Each method's effectiveness is evaluated through experimental analysis.
+
+\subsection{Handling the Kidnapped Robot Problem}
+The kidnapped robot problem is addressed by periodically introducing random particles to the particle set, providing the algorithm with a chance to re-localize in case of a sudden position change.
+
+\section{Experimental Analysis}
+
+\subsection{Setup}
+The experiments were conducted on a simulated environment using the \texttt{socspioneer} package and the provided map. The localization accuracy and robustness of the Particle Filter were compared to the AMCL implementation in ROS 2.
+
+\subsection{Results}
+\begin{itemize}
+    \item Localization Accuracy: Describe and compare the accuracy of both implementations.
+    \item Robustness to Kidnapping: Discuss how well each implementation handled the kidnapped robot scenario.
+    \item Computational Efficiency: Summarize any differences in computational cost between the Particle Filter and AMCL.
+\end{itemize}
+
+\section{Optional Extensions}
+
+\subsection{Adaptive MCL}
+Adaptive MCL dynamically adjusts the number of particles based on localization uncertainty. This extension aims to balance accuracy and computational efficiency.
+
+\subsection{Kalman Filter-based Localization}
+As a complementary approach to particle filtering, the Kalman filter provides a continuous, probabilistic model for state estimation, suitable for linear systems.
+
+\section{Conclusion}
+In this report, we have implemented and analyzed a Particle Filter for localization, comparing its performance with AMCL. The Particle Filter algorithm demonstrates flexibility in handling dynamic environments and localization challenges such as the kidnapped robot problem. Future work could explore hybrid methods that combine the Particle Filter with Kalman filtering for enhanced localization.
+
+\section*{References}
+\begin{itemize}
+    \item Thrun, S., Burgard, W., \& Fox, D. (2005). \textit{Probabilistic Robotics}. MIT Press.
+    \item ROS Documentation: \url{https://docs.ros.org/}
+\end{itemize}
+
+\end{document}
