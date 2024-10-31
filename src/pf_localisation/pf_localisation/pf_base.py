@@ -232,7 +232,7 @@ class PFLocaliserBase(object):
             
             # ----- Find robot's linear forward/backward motion, given the dif_x and 
             # ----- dif_y changes and its orientation
-            distance_travelled = math.sqrt(dif_x*dif_x + dif_y*dif_y)
+            distance_travelled = math.sqrt(dif_x*dif_x + dif_y*dif_y)/1000
             direction_travelled = math.atan2(dif_y, dif_x)
             temp = abs(new_heading - direction_travelled)
     

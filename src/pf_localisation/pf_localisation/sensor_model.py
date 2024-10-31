@@ -112,9 +112,6 @@ class SensorModel(object):
     
         p = 1.0 # Sample weight (not a probability!)
         
-        
-
-        
         for i, obs_bearing in self.reading_points:
             # ----- For each range...
             obs_range = scan.ranges[i]
