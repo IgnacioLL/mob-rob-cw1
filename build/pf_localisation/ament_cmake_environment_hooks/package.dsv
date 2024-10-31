@@ -1,0 +1,4 @@
+source;share/pf_localisation/local_setup.bash
+source;share/pf_localisation/local_setup.dsv
+source;share/pf_localisation/local_setup.sh
+source;share/pf_localisation/local_setup.zsh

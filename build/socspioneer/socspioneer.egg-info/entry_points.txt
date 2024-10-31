@@ -1,0 +1,4 @@
+[console_scripts]
+marker_publisher = socspioneer.marker_publisher:main
+twist_publisher = socspioneer.twist_publisher:main
+

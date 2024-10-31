@@ -1,0 +1,4 @@
+source;share/pf_localisation/hook/cmake_prefix_path.dsv
+source;share/pf_localisation/hook/cmake_prefix_path.sh
+source;share/pf_localisation/local_setup.dsv
+source;share/pf_localisation/local_setup.sh

@@ -1,0 +1,1254 @@
+[0.073s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.073s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='sequential', event_handlers=None, base_paths=['.'], paths=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=CustomArgumentParser(prog='colcon build', usage=None, description='Build a set of packages.', formatter_class=<class 'colcon_core.command.CustomFormatter'>, conflict_handler='error', add_help=True), verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fce51b91bd0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fce51b91bd0>>)
+[0.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.313s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extension 'ignore_ament_install'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extensions ['ros']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extension 'ros'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extensions ['cmake', 'python']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extension 'cmake'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extension 'python'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extensions ['python_setup_py']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_10_30-17_18_38) by extension 'python_setup_py'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/Stage) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/Stage) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/Stage) by extension 'ignore_ament_install'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/Stage) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/Stage) by extension 'ros'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/Stage) by extensions ['cmake', 'python']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/Stage) by extension 'cmake'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/Stage) by extension 'python'
+[0.330s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Stage' with type 'cmake' and name 'Stage'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/pf_localisation) by extensions ['ignore', 'ignore_ament_install']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/pf_localisation) by extension 'ignore'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/pf_localisation) by extension 'ignore_ament_install'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/pf_localisation) by extensions ['ros']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/pf_localisation) by extension 'ros'
+[0.332s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pf_localisation' with type 'ros.ament_cmake' and name 'pf_localisation'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/socspioneer) by extensions ['ignore', 'ignore_ament_install']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/socspioneer) by extension 'ignore'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/socspioneer) by extension 'ignore_ament_install'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/socspioneer) by extensions ['ros']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/socspioneer) by extension 'ros'
+[0.333s] DEBUG:colcon.colcon_core.package_identification:Package 'src/socspioneer' with type 'ros.ament_python' and name 'socspioneer'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/stage_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/stage_ros2) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/stage_ros2) by extension 'ignore_ament_install'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/stage_ros2) by extensions ['ros']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/stage_ros2) by extension 'ros'
+[0.334s] DEBUG:colcon.colcon_core.package_identification:Package 'src/stage_ros2' with type 'ros.ament_cmake' and name 'stage_ros2'
+[0.334s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.334s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.334s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'Stage' build argument 'cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'Stage' build argument 'cmake_target' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'Stage' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'Stage' build argument 'cmake_clean_cache' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'Stage' build argument 'cmake_clean_first' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'Stage' build argument 'cmake_force_configure' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'Stage' build argument 'ament_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'Stage' build argument 'catkin_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'Stage' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.362s] DEBUG:colcon.colcon_core.verb:Building package 'Stage' with the following arguments: {'ament_cmake_args': None, 'build_base': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/Stage', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage', 'merge_install': False, 'path': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/Stage', 'symlink_install': False, 'test_result_base': None}
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'pf_localisation' build argument 'cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'pf_localisation' build argument 'cmake_target' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'pf_localisation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'pf_localisation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'pf_localisation' build argument 'cmake_clean_first' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'pf_localisation' build argument 'cmake_force_configure' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'pf_localisation' build argument 'ament_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'pf_localisation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'pf_localisation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.363s] DEBUG:colcon.colcon_core.verb:Building package 'pf_localisation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/pf_localisation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation', 'merge_install': False, 'path': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/pf_localisation', 'symlink_install': False, 'test_result_base': None}
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'socspioneer' build argument 'cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'socspioneer' build argument 'cmake_target' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'socspioneer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'socspioneer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'socspioneer' build argument 'cmake_clean_first' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'socspioneer' build argument 'cmake_force_configure' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'socspioneer' build argument 'ament_cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'socspioneer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'socspioneer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.364s] DEBUG:colcon.colcon_core.verb:Building package 'socspioneer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/socspioneer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer', 'merge_install': False, 'path': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/socspioneer', 'symlink_install': False, 'test_result_base': None}
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'stage_ros2' build argument 'cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'stage_ros2' build argument 'cmake_target' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'stage_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'stage_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'stage_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'stage_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'stage_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'stage_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'stage_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.364s] DEBUG:colcon.colcon_core.verb:Building package 'stage_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/stage_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2', 'merge_install': False, 'path': '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/stage_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.364s] INFO:colcon.colcon_core.executor:Executing jobs using 'sequential' executor
+[0.365s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'Stage'
+[0.365s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/Stage'
+[0.366s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.366s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.381s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/Stage': BASH=/bin/sh TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --build /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/Stage -- -j6 -l6
+[0.823s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/Stage' returned '0': BASH=/bin/sh TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --build /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/Stage -- -j6 -l6
+[0.957s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/Stage': BASH=/bin/sh TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --install /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/Stage
+[1.042s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(Stage)
+[1.043s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/Stage' returned '0': BASH=/bin/sh TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --install /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/Stage
+[1.045s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage' for CMake module files
+[1.046s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage' for CMake config files
+[1.046s] Level 1:colcon.colcon_core.shell:create_environment_hook('Stage', 'cmake_prefix_path')
+[1.046s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/hook/cmake_prefix_path.dsv'
+[1.048s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/hook/cmake_prefix_path.sh'
+[1.050s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/lib'
+[1.050s] Level 1:colcon.colcon_core.shell:create_environment_hook('Stage', 'ld_library_path_lib')
+[1.051s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/hook/ld_library_path_lib.dsv'
+[1.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/hook/ld_library_path_lib.sh'
+[1.053s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/bin'
+[1.053s] Level 1:colcon.colcon_core.shell:create_environment_hook('Stage', 'path')
+[1.053s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/hook/path.dsv'
+[1.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/hook/path.sh'
+[1.057s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/lib/pkgconfig/Stage.pc'
+[1.057s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/lib/python3.10/site-packages'
+[1.058s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/bin'
+[1.058s] Level 1:colcon.colcon_core.shell:create_environment_hook('Stage', 'pythonscriptspath')
+[1.058s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/hook/pythonscriptspath.dsv'
+[1.060s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/hook/pythonscriptspath.sh'
+[1.061s] INFO:colcon.colcon_core.shell:Creating package descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/package.dsv'
+[1.064s] INFO:colcon.colcon_core.shell:Creating package script '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/Stage/package.sh'
+[1.075s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/share/colcon-core/packages/Stage)
+[1.077s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'Stage' finished with '0'
+[1.078s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'pf_localisation'
+[1.078s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/pf_localisation' with build type 'ament_cmake'
+[1.078s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/pf_localisation'
+[1.078s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.091s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/pf_localisation': BASH=/bin/sh CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer:/opt/ros/humble TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --build /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/pf_localisation -- -j6 -l6
+[1.678s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/pf_localisation' returned '0': BASH=/bin/sh CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer:/opt/ros/humble TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --build /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/pf_localisation -- -j6 -l6
+[1.731s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/pf_localisation': BASH=/bin/sh CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer:/opt/ros/humble TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --install /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/pf_localisation
+[1.822s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pf_localisation)
+[1.822s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation' for CMake module files
+[1.822s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/pf_localisation' returned '0': BASH=/bin/sh CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer:/opt/ros/humble TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --install /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/pf_localisation
+[1.823s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation' for CMake config files
+[1.823s] Level 1:colcon.colcon_core.shell:create_environment_hook('pf_localisation', 'cmake_prefix_path')
+[1.823s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/pf_localisation/hook/cmake_prefix_path.dsv'
+[1.825s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/pf_localisation/hook/cmake_prefix_path.sh'
+[1.826s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/lib'
+[1.826s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/bin'
+[1.826s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/lib/pkgconfig/pf_localisation.pc'
+[1.827s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/lib/python3.10/site-packages'
+[1.827s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/bin'
+[1.827s] INFO:colcon.colcon_core.shell:Creating package descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/pf_localisation/package.dsv'
+[1.828s] INFO:colcon.colcon_core.shell:Creating package script '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/pf_localisation/package.sh'
+[1.830s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/colcon-core/packages/pf_localisation)
+[1.880s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pf_localisation)
+[1.880s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation' for CMake module files
+[1.881s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation' for CMake config files
+[1.881s] Level 1:colcon.colcon_core.shell:create_environment_hook('pf_localisation', 'cmake_prefix_path')
+[1.882s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/pf_localisation/hook/cmake_prefix_path.dsv'
+[1.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/pf_localisation/hook/cmake_prefix_path.sh'
+[1.906s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/lib'
+[1.906s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/bin'
+[1.907s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/lib/pkgconfig/pf_localisation.pc'
+[1.908s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/lib/python3.10/site-packages'
+[1.909s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/bin'
+[1.910s] INFO:colcon.colcon_core.shell:Creating package descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/pf_localisation/package.dsv'
+[1.919s] INFO:colcon.colcon_core.shell:Creating package script '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/pf_localisation/package.sh'
+[1.932s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation/share/colcon-core/packages/pf_localisation)
+[1.945s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'pf_localisation' finished with '0'
+[1.945s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'socspioneer'
+[1.946s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/socspioneer' with build type 'ament_python'
+[1.947s] Level 1:colcon.colcon_core.shell:create_environment_hook('socspioneer', 'ament_prefix_path')
+[1.947s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/share/socspioneer/hook/ament_prefix_path.dsv'
+[1.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/share/socspioneer/hook/ament_prefix_path.sh'
+[1.974s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.369s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/socspioneer'
+[2.369s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.009s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/socspioneer': BASH=/bin/sh PYTHONPATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/socspioneer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/lib/python3.10/site-packages:${PYTHONPATH} TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/socspioneer build --build-base /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/socspioneer/build install --record /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/socspioneer/install.log --single-version-externally-managed install_data
+[3.448s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer' for CMake module files
+[3.449s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/socspioneer' returned '0': BASH=/bin/sh PYTHONPATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/socspioneer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/lib/python3.10/site-packages:${PYTHONPATH} TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/socspioneer build --build-base /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/socspioneer/build install --record /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/socspioneer/install.log --single-version-externally-managed install_data
+[3.449s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer' for CMake config files
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/lib'
+[3.451s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/bin'
+[3.451s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/lib/pkgconfig/socspioneer.pc'
+[3.451s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/lib/python3.10/site-packages'
+[3.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('socspioneer', 'pythonpath')
+[3.451s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/share/socspioneer/hook/pythonpath.dsv'
+[3.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/share/socspioneer/hook/pythonpath.sh'
+[3.454s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/bin'
+[3.455s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(socspioneer)
+[3.455s] INFO:colcon.colcon_core.shell:Creating package descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/share/socspioneer/package.dsv'
+[3.457s] INFO:colcon.colcon_core.shell:Creating package script '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/share/socspioneer/package.sh'
+[3.458s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer/share/colcon-core/packages/socspioneer)
+[3.460s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'socspioneer' finished with '0'
+[3.460s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'stage_ros2'
+[3.460s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/stage_ros2' with build type 'ament_cmake'
+[3.460s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/src/stage_ros2'
+[3.460s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/stage_ros2': BASH=/bin/sh CMAKE_PREFIX_PATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer:/opt/ros/humble LD_LIBRARY_PATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/lib:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --build /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/stage_ros2 -- -j6 -l6
+[3.605s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/stage_ros2' returned '0': BASH=/bin/sh CMAKE_PREFIX_PATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer:/opt/ros/humble LD_LIBRARY_PATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/lib:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --build /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/stage_ros2 -- -j6 -l6
+[3.673s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/stage_ros2': BASH=/bin/sh CMAKE_PREFIX_PATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer:/opt/ros/humble LD_LIBRARY_PATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/lib:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --install /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/stage_ros2
+[3.730s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stage_ros2)
+[3.730s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/stage_ros2' returned '0': BASH=/bin/sh CMAKE_PREFIX_PATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/pf_localisation:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/socspioneer:/opt/ros/humble LD_LIBRARY_PATH=/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/Stage/lib:/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib TERM_PROGRAM=${TERM_PROGRAM}
+BASH_FUNC_rvirsh%%=() {  KVMHOST=$1;
+ shift;
+ if [ "$KVMHOST" ]; then
+ if [ "$KVMHOST" = "." ]; then
+ URI="qemu:///system";
+ else
+ URI="qemu+ssh://$KVMHOST/system";
+ fi;
+ else
+ URI="qemu:///system";
+ fi;
+ virsh --connect $URI $@
+}
+BASH_FUNC_ml%%=() {  module ml "$@"
+}
+BASH_FUNC_module%%=() {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl sh "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+BASH_FUNC_resize%%=() {  eval `command resize`
+}
+BASH_FUNC_command_not_found_handle%%=() {  unset command_not_found_handle;
+ if [[ "$IFS" != '
+' ]]; then
+ _command_not_found $*;
+ fi;
+ function dbg ()
+ {
+ [[ -n $CRICHTON_DEBUG ]] && echo $1 1>&2
+ };
+ SORT="/usr/bin/_SortBashRC";
+ PATTERN='[0-9][0-9][0-9].*';
+ if [[ -n $CRICHTON_DEBUG ]]; then
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN);
+ else
+ modules=$($SORT $CRICHTON_SYS/$PATTERN $CRICHTON_USR/$PATTERN 2>&-);
+ fi;
+ dbg "- Found $(/bin/echo $modules | /usr/bin/wc -w 2>&-) modules.";
+ for mod in ${modules} _command_not_found;
+ do
+ dbg "-- $(/bin/basename $mod 2>&-)";
+ CRICHTON_SYS=$CRICHTON_SYS CRICHTON_USR=$CRICHTON_USR "$mod" $*;
+ exit=$?;
+ dbg "[exit $exit]";
+ [[ $exit == 255 ]] && {
+ _command_not_found $1;
+ break
+ };
+ [[ $exit == 0 ]] && break;
+ done;
+ return 127
+}
+BASH_FUNC_setpath%%=() {  if [ -f /usr/bin/pathfix ]; then
+ pathfix_binary=/usr/bin/pathfix;
+ else
+ pathfix_binary=/usr/local/bin/pathfix;
+ fi;
+ new_PATH=`$pathfix_binary $@`;
+ [ "$new_PATH" ] && PATH="$new_PATH";
+ export PATH
+}
+BASH_FUNC__command_not_found%%=() {  echo "bash: $1: command not found" 1>&2
+}
+BASH_FUNC_colloq%%=() {  more /usr/local/alert/misc/coll
+}
+BASH_FUNC_gnu%%=() {  command gnu -u $LOGNAME $*
+}
+BASH_FUNC_purge%%=() {  rm -f *~ .*~ \#*\# tmp*
+}
+BASH_FUNC_setup%%=() {  source /usr/local/share/setup/setup.sh $*
+} _=/usr/bin/env /usr/bin/cmake --install /afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/build/stage_ros2
+[3.731s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2' for CMake module files
+[3.735s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2' for CMake config files
+[3.738s] Level 1:colcon.colcon_core.shell:create_environment_hook('stage_ros2', 'cmake_prefix_path')
+[3.738s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/hook/cmake_prefix_path.dsv'
+[3.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/hook/cmake_prefix_path.sh'
+[3.745s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib'
+[3.745s] Level 1:colcon.colcon_core.shell:create_environment_hook('stage_ros2', 'ld_library_path_lib')
+[3.746s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/hook/ld_library_path_lib.dsv'
+[3.748s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/hook/ld_library_path_lib.sh'
+[3.752s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/bin'
+[3.752s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib/pkgconfig/stage_ros2.pc'
+[3.753s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib/python3.10/site-packages'
+[3.754s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/bin'
+[3.755s] INFO:colcon.colcon_core.shell:Creating package descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/package.dsv'
+[3.758s] INFO:colcon.colcon_core.shell:Creating package script '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/package.sh'
+[3.762s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/colcon-core/packages/stage_ros2)
+[3.852s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stage_ros2)
+[3.852s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2' for CMake module files
+[3.853s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2' for CMake config files
+[3.853s] Level 1:colcon.colcon_core.shell:create_environment_hook('stage_ros2', 'cmake_prefix_path')
+[3.853s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/hook/cmake_prefix_path.dsv'
+[3.855s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/hook/cmake_prefix_path.sh'
+[3.856s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib'
+[3.856s] Level 1:colcon.colcon_core.shell:create_environment_hook('stage_ros2', 'ld_library_path_lib')
+[3.856s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/hook/ld_library_path_lib.dsv'
+[3.858s] INFO:colcon.colcon_core.shell:Creating environment hook '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/hook/ld_library_path_lib.sh'
+[3.859s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/bin'
+[3.859s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib/pkgconfig/stage_ros2.pc'
+[3.859s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/lib/python3.10/site-packages'
+[3.859s] Level 1:colcon.colcon_core.environment:checking '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/bin'
+[3.860s] INFO:colcon.colcon_core.shell:Creating package descriptor '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/package.dsv'
+[3.861s] INFO:colcon.colcon_core.shell:Creating package script '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/stage_ros2/package.sh'
+[3.862s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/stage_ros2/share/colcon-core/packages/stage_ros2)
+[3.864s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'stage_ros2' finished with '0'
+[3.864s] DEBUG:colcon.colcon_core.executor.sequential:closing loop
+[3.864s] DEBUG:colcon.colcon_core.executor.sequential:loop closed
+[3.864s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.864s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.865s] INFO:colcon.colcon_core.shell:Creating prefix script '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/local_setup.sh'
+[3.866s] INFO:colcon.colcon_core.shell:Creating prefix util module '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/_local_setup_util_sh.py'
+[3.870s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/afs/inf.ed.ac.uk/user/s27/s2761803/Desktop/MOB/mob-rob-cw1/install/setup.sh'
